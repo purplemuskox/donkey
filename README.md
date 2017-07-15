@@ -8,4 +8,4 @@ Sparky is a 3D printed model car driven by a Raspberry Pi. It runs code derived 
 
 Many thanks to @wroscoe, @alanwells and others in the community!
 
-![](images/sparky.png)
+![](images/sparky.jpg)
