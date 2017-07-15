@@ -21,6 +21,8 @@ import donkey as dk
 from keras.callbacks import ModelCheckpoint
 import keras
 
+from keras.utils import plot_model
+
 # Get args.
 
 
@@ -53,6 +55,14 @@ if __name__ == "__main__":
 
     #path to save the model
     model_path = os.path.join(dk.config.models_path, model_name+".hdf5")
+
+    #print model diagram
+    plot_model(model, to_file='model_name.png', show_shapes = True, show_layer_names = True)
+    print("Model diagram printed")
+
+    #print model summary
+    print(model.summary())
+
 
     #train the model
     dk.models.train_gen(model, model_path, train_gen=train['gen'], val_gen=val['gen'] , steps=steps)
