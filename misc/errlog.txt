@@ -1,0 +1,39 @@
+MT: %s [[ 0.]]
+ REMOTE: angle: +0.43   throttle: +0.00   drive_mode: autoMT: %s [[ 0.]]
+ REMOTE: angle: +0.43   throttle: +0.00   drive_mode: autoERROR:tornado.application:Uncaught exception POST /api/vehicles/control/magnet/ (192.168.1.13)
+HTTPServerRequest(protocol='http', host='polaris:8887', method='POST', uri='/api/vehicles/control/magnet/', version='HTTP/1.1', remote_ip='192.168.1.13', headers={'Content-Type': 'multipart/form-data; boundary=6aca179f548a41c988fa54411158b781', 'Content-Length': '4739', 'Host': 'polaris:8887', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'User-Agent': 'python-requests/2.4.3 CPython/3.4.2 Linux/4.9.24-v7+', 'Accept': '*/*'})
+Traceback (most recent call last):
+  File "C:\Users\boss\AppData\Local\Programs\Python\Python35\lib\site-packages\tornado\web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "c:\users\boss\donkey\donkey\remotes.py", line 359, in post
+    pilot_angle, pilot_throttle = V['pilot'].decide(img_arr)
+  File "c:\users\boss\donkey\donkey\pilots.py", line 50, in decide
+    angle_binned, throttle = self.model.predict(img_arr)
+  File "C:\Users\boss\AppData\Local\Programs\Python\Python35\lib\site-packages\keras\engine\training.py", line 1567, in predict
+    check_batch_axis=False)
+  File "C:\Users\boss\AppData\Local\Programs\Python\Python35\lib\site-packages\keras\engine\training.py", line 127, in _standardize_input_data
+    str(array.shape))
+ValueError: Error when checking : expected img_in to have 4 dimensions, but got array with shape (1, 1)
+ERROR:tornado.access:500 POST /api/vehicles/control/magnet/ (192.168.1.13) 20.23ms
+MT: %s [[ 0.]]
+ REMOTE: angle: +0.43   throttle: +0.00   drive_mode: autoMT: %s [[ 0.]]
+ REMOTE: angle: +0.43   throttle: +0.00   drive_mode: autoMT: %s [[ 0.]]
+ REMOTE: angle: +0.43   throttle: +0.00   drive_mode: autoMT: %s [[ 0.]]
+ REMOTE: angle: +0.43   throttle: +0.00   drive_mode: autoMT: %s [[ 0.]]
+ REMOTE: angle: +0.43   throttle: +0.00   drive_mode: autoMT: %s [[ 0.]]
+ REMOTE: angle: +0.43   throttle: +0.00   drive_mode: autoMT: %s [[ 0.]]
+ REMOTE: angle: +0.43   throttle: +0.00   drive_mode: autoMT: %s [[ 0.]]
+ REMOTE: angle: +0.00   throttle: +0.00   drive_mode: autoMT: %s [[ 5.22923851]]
+ REMOTE: angle: +0.00   throttle: +5.23   drive_mode: autoMT: %s [[ 5.08692741]]
+ REMOTE: angle: +0.00   throttle: +5.09   drive_mode: autoMT: %s [[ 0.57785344]]
+ REMOTE: angle: +0.00   throttle: +0.58   drive_mode: autoMT: %s [[ 1.71408963]]
+ REMOTE: angle: +0.00   throttle: +1.71   drive_mode: autoMT: %s [[ 5.43000889]]
+ REMOTE: angle: +0.00   throttle: +5.43   drive_mode: autoMT: %s [[ 1.70614791]]
+ REMOTE: angle: +0.00   throttle: +1.71   drive_mode: autoMT: %s [[ 6.16164398]]
+ REMOTE: angle: +0.00   throttle: +6.16   drive_mode: autoMT: %s [[ 4.72490215]]
+ REMOTE: angle: +0.00   throttle: +4.72   drive_mode: autoMT: %s [[ 2.69284749]]
+ REMOTE: angle: +0.00   throttle: +2.69   drive_mode: autoMT: %s [[ 0.35279012]]
+ REMOTE: angle: +0.00   throttle: +0.35   drive_mode: autoMT: %s [[ 5.26236153]]
+ REMOTE: angle: +0.00   throttle: +5.26   drive_mode: autoMT: %s [[ 0.51391864]]
+ REMOTE: angle: +0.00   throttle: +0.51   drive_mode: autoMT: %s [[ 2.77449822]]
+ REMOTE: angle: +0.00   throttle: +2.77   drive_mode: autoMT: %s [[ 0.]]
