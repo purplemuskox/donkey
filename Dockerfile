@@ -10,6 +10,7 @@ RUN apt-get -y install python3-skimage
 
 RUN pip install numpy
 RUN pip install tensorflow
+#RUN pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.0-cp36-cp36m-linux_x86_64.whl
 
 # First copy only setup.py, run pip install, and then copy the whole donkey dir.
 # This is so only changes to setup.py trigger a pip install.
