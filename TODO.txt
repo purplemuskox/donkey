@@ -1,0 +1,4 @@
+TODO
+----
+
+* Install CNTK into docker image
