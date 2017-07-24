@@ -1,0 +1,14 @@
+Calibration settings: Exceed Magnet
+
+
+Throttle: [CHANNEL 0]
+MAX: 470 [limit to 400 to prevent runaway]
+ZERO: 370
+MIN: 370
+
+Steering: [CHANNEL 1]
+RIGHT: 320
+Center: 400
+LEFT: 460
+
+

@@ -19,6 +19,12 @@ pip install -e c:\Users\boss\donkey
 #Create video from session files
 ffmpeg -pattern_type glob -i 'frame*.jpg' -c:v libx264 -pix_fmt yuv420p output.mp4
 
+#change default input framerate from 25 to 5 (normal speed video)
+ffmpeg -framerate 5 -pattern_type glob -i 'frame*.jpg' -c:v libx264 -pix_fmt yuv420p output.mp4
+
+#Create a 3 part composite video
+ffmpeg -i raw.mp4 -i attention.mp4 -i telemetry.mp4 -filter_complex "[0:v][1:v][2:v]hstack=inputs=3[v]" -map "[v]"  output.mp4
+
 #What is this RPI log?
 center: 370
 

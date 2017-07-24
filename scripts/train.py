@@ -57,11 +57,11 @@ if __name__ == "__main__":
     model_path = os.path.join(dk.config.models_path, model_name+".hdf5")
 
     #print model diagram
-    plot_model(model, to_file='model_name.png', show_shapes = True, show_layer_names = True)
-    print("Model diagram printed")
+    #plot_model(model, to_file='model_name.png', show_shapes = True, show_layer_names = True)
+    #print("Model diagram printed")
 
     #print model summary
-    print(model.summary())
+    #print(model.summary())
 
 
     #train the model

@@ -25,18 +25,18 @@ while getopts ":vbd" opt; do
   case $opt in
   	v)
 		if [ $HASVOL == 1 ]; then #means the volume existed, so it was not built
-			echo "start-server: Initializing Donkey server volume..." >&2
+			echo "start-server: Initializing  server volume..." >&2
 			docker volume create --name mydonkey
 		fi
 		;;
     b)
 		if [ $HASIMAGE == 1 ]; then #means the image existed, so it was not built
-			echo "start-server: Building Donkey server image..." >&2
+			echo "start-server: Building  server image..." >&2
 			docker build -t donkey .
 		fi
 		;;
     d)
-		echo "start-server: Running Donkey server container without serve.py and attaching..." >&2
+		echo "start-server: Running  server container without serve.py and attaching..." >&2
 		docker run -p 8887:8887 -v ~/mydonkey:/root/mydonkey --entrypoint=/bin/bash -it donkey
 		exit
 		;;
@@ -47,5 +47,6 @@ while getopts ":vbd" opt; do
   esac
 done
 
-echo "start-server: Running Donkey server container..." >&2
-docker run -p 8887:8887 -v ~/mydonkey:/root/mydonkey donkey
+echo "start-server: Running server container..." >&2
+#docker run -p 8887:8887 -v ~/mydonkey:/root/mydonkey donkey
+docker run -p 8887:8887 -v c:/users/boss/mydonkey:/root/mydonkey donkey

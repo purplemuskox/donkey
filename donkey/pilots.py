@@ -50,6 +50,8 @@ class KerasCategorical(BasePilot):
         angle_binned, throttle = self.model.predict(img_arr)
         angle_certainty = max(angle_binned[0])
         angle_unbinned = utils.unbin_Y(angle_binned)
+        #BUGBUG: potential issue with unbinned output angle?
+        #print('b-angle {}', format(angle_binned))
         return angle_unbinned[0], throttle[0][0]
 
 
